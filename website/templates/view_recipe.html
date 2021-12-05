@@ -1,0 +1,190 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+  %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
+    <title>Home</title>
+  </head>
+  <body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+        <Link href="/index"><a class="navbar-brand mb-0 h1" href="/">N.O.M.</a></Link>  
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbar"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar">
+        <div class="navbar-nav">
+          
+          <a class="nav-item nav-link" id="login" href="/login">Login</a>
+          <a class="nav-item nav-link" id="signUp" href="/sign-up">Sign Up</a>
+          
+        </div>
+      </div>
+    </nav>
+
+      
+
+    <div class="container">
+
+    <head>
+      <script type="text/javascript">
+        window.onload = function(){
+            var username ='';
+            var site ='';
+            var recipe_id ='11';
+            var recipe_name ='Kim Chi Ji Gae';
+            var serving_size ='2';
+            var prep_time_mins ='30';
+            var cook_time_mins ='30';
+            var source_type ='None';
+            var source_details ='Babu&#39;s Umma';
+            var last_modified_ts ='2021-11-03 05:13:59';
+            var description = 'Delicious for a cold night.';
+            var ingredients = 'adish\r\nPork';
+            var directions = 'Mix \r\nBoil';
+            document.getElementById('recipe_id').value = recipe_id;
+            document.getElementById('recipe_name').innerHTML = recipe_name;
+            document.getElementById('serving_size').innerHTML = serving_size;
+            document.getElementById('prep_time_mins').innerHTML = prep_time_mins;
+            document.getElementById('cook_time_mins').innerHTML = cook_time_mins;
+            document.getElementById('source_type').innerHTML = 'Source:';
+            document.getElementById('source_details').innerHTML = source_details;
+            document.getElementById("source_details").setAttribute("href",source_details);
+            document.getElementById('last_modified_ts').innerHTML = 'Last Edited: ' + last_modified_ts;
+            document.getElementById('description').innerHTML = description;
+            document.getElementById('ingredients').innerHTML = ingredients;
+            document.getElementById('directions').innerHTML = directions;
+            localStorage.setItem("cuurenRecipeId", recipe_id);
+        }
+        </script>
+        <script type="text/javascript" src="index.js"></script>
+    </head>
+ 
+ <body>
+      <p></p>
+      <table style="width:100%">
+      <table class="table">
+      <style>
+      th, td, tr {
+        padding: 20px;
+      }
+      th {text-align: center;
+      }
+      </style>
+      <tr>
+        <br>
+        <h3 align="center" colspan="3" id="recipe_name">Recipe name here</h3>
+        <br>
+      </tr>
+      <tr>
+      <tr>
+        <td >
+            <h5>Description</h5>
+            <p id="description" style="white-space: pre-line">description text ... ...</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="row">
+            <h5 class="col">Serving Size</h5>
+            <h5 class="col">Preperation Time (Mins)</h5>
+            <h5 class="col">Cooking TIme (Mins)</h5>
+          </div>
+          <div class="row">
+            <div class="col" id="serving_size">Serving Size</div>
+            <div class="col" id="prep_time_mins">Preperation Time (Mins)</div>
+            <div class="col" id="cook_time_mins">Cooking TIme (Mins)</div>
+          </div>
+        </td>
+      </tr>
+      
+
+
+      <tr>
+        <td colspan="3">
+          <h5>Ingredients</h5>
+           <p id="ingredients" style="white-space: pre-line">ingredients list</p>
+        </td>
+      </tr>
+        <td colspan="3">
+          <h5>Steps</h5>
+          <p id="directions" style="white-space: pre-line">directions</p>
+          <ol>
+           
+          </ol>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <i class="text-muted" id="source_type" style="font-size: 80%">Source:</i>
+           <a href="" class="text-muted" id="source_details" style="font-size: 80%"> See Original Recipe </a>
+        </td>    
+      </tr>
+        <tr>
+          <td>
+          <i class="text-muted" id="last_modified_ts" style="font-size: 80%">last edited ts (modification_ts)</i>
+          </td>
+        </tr>
+
+      <tr>
+    </table>
+             </div>
+          </div>
+       </div>
+    </div>
+    <script src="./nom_base_template_files/react-refresh.js"></script><script src="./nom_base_template_files/dll_f9de5cbc314a1e41f91e.js"></script><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{}},"page":"/","query":{},"buildId":"development","isFallback":false,"customServer":true,"gip":true}</script><script nomodule="" src="./nom_base_template_files/polyfills.js"></script><script async="" data-next-page="/_app" src="./nom_base_template_files/_app.js"></script><script async="" data-next-page="/" src="./nom_base_template_files/index.js"></script><script src="./nom_base_template_files/webpack.js" async=""></script><script src="./nom_base_template_files/main.js" async=""></script><script src="./nom_base_template_files/_buildManifest.js" async=""></script><script src="./nom_base_template_files/_ssgManifest.js" async=""></script>
+    <div id="__next-build-watcher" style="position: fixed; bottom: 10px; right: 20px; width: 0px; height: 0px; z-index: 99999;"></div>
+    <div id="__next-prerender-indicator" style="position: fixed; bottom: 20px; right: 10px; width: 0px; height: 0px; z-index: 99998; transition: all 100ms ease 0s;"></div>
+ </body>
+
+ <form method="POST" action="/edit-recipe">
+  <input id="recipe_id" type="hidden" name="recipeID" value="">
+  <button type="submit" class="btn btn-primary">Edit Recipe</button>
+ </form>
+
+ <form method="POST" action="/edit-recipe">
+  <input id="recipe_id" type="hidden" name="recipeID" value="">
+  <button type="submit" class="btn btn-primary">Delete</button>
+ </form>
+
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="/static/index.js"
+    ></script>
+  </body>
+</html>
+{% endblock %}
