@@ -1,6 +1,6 @@
-from flask import Blueprint, render_template, request, flash, jsonify
+from flask import Blueprint, render_template, request, flash, jsonify, redirect, url_for
 from flask_login import login_required, current_user
-from .models import Note
+from .models import Note, Profile
 from . import db
 import json
 
@@ -36,7 +36,27 @@ def delete_note():
 
     return jsonify({})
 
-@views.route('/add-recipe', methods=['GET', 'POST'])
-@login_required
-def add_recipe():
-    return render_template("add_recipe.html", user=current_user)
+@views.route('/profile', methods=['GET', 'POST'])
+def profile():
+    if request.method == 'POST':
+        first_name = request.form.get('firstName')
+        last_name = request.form.get('lastName')
+        email = request.form.get('email')
+        phone_country_code = request.form.get('phone_country_code')
+        phone_number = request.form.get('phone_number')
+        birthdate = request.form.get('birthdate')
+        like_meeting = request.form.get('like_meeting')
+        like_meeting_why = request.form.get('like_meeting_why')
+
+        profile = Profile(email=email, first_name=first_name, last_name=last_name, 
+                       phone_country_code=phone_country_code,
+                       phone_number=phone_number,
+                       birthdate=birthdate,
+                       like_meeting=like_meeting,
+                       like_meeting_why=like_meeting_why)
+        db.session.add(profile)
+        db.session.commit()
+        flash('Profile Updated! You\'on your way to making some new connections! ', category='success')
+        return redirect(url_for('views.home'))
+    
+    return render_template("profile.html", user=current_user)

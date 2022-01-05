@@ -1,0 +1,118 @@
+{% extends "base.html" %} {% block title %}Sign Up{% endblock %} {% block
+    content %}
+    <form method="POST">
+      <div class="text-center">
+        <br>
+        <img src="https://storage.googleapis.com/social-social-club/logo.png" class="img-fluid" alt="Responsive image"  width=20%>
+      </div>
+      <br>
+      <h3>Join us for real social networking! </h3>
+      <p>Meaningful social networking is possible, from online to offline! Let us know more about you and we will reach out to you over email and WhatsApp with personalised and curated events!</p>
+      <hr/>
+      <h3 align="center">PROFILE</h3>
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="firstName"
+          name="firstName"
+          placeholder="Enter first name"
+        />
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="lastName"
+          name="lastName"
+          placeholder="Enter last name"
+        />
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          name="email"
+          placeholder="Enter email"
+        />
+      </div>
+      <div class="form-group">
+        <label for="phone_country_code">Country Code</label>
+        <input
+          type="phone_country_code"
+          class="form-control"
+          id="phone_country_code"
+          name="phone_country_code"
+          placeholder="+00"
+        />
+      </div>
+      <div class="form-group">
+        <label for="phone_number">Phone Numnber</label>
+        <input
+          type="phone_number"
+          class="form-control"
+          id="phone_number"
+          name="phone_number"
+          placeholder="Enter Phone No."
+        />
+      </div>
+      <div class="form-group">
+        <label for="birthdate">Date of Birth </label>
+        <input
+          type="birthdate"
+          class="form-control"
+          id="birthdate"
+          name="birthdate"
+          placeholder="Enter D.O.B."
+        />
+      </div>
+      <div class="form-group">
+        <label for="like_meeting">Do you actually like meeting new people?</label>
+        <select class="form-control">
+          <option>Anytime, sure!</option>
+          <option>Not really ...</option>
+        </select>
+        <br>
+        <div class="form-group">
+          <label for="like_meeting_why">Why do you say so?</label>
+          <input
+            type="like_meeting_why"
+            class="form-control"
+            id="like_meeting_why"
+            name="like_meeting_why"
+            placeholder=""
+          />
+        </div>
+      <br>
+      <h6>Who are you trying to meet?</h5>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="longterm">
+        <label class="form-check-label" for="longterm">
+          Long Term Dating Potential
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="casual">
+        <label class="form-check-label" for="casual">
+          Casual Dating Potential
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="business">
+        <label class="form-check-label" for="business">
+          Business leads and networking
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="friends">
+        <label class="form-check-label" for="friends">
+          Friends with common hobbies
+        </label>
+      </div>
+      <br>
+      <button type="submit" class="btn btn-primary">Let's Connect</button>
+    </form>
+    {% endblock %}

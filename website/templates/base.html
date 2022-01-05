@@ -18,15 +18,18 @@
   </head>
   <body>
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
-        <Link href="/index"><a class="navbar-brand mb-0 h1" href="/">N.O.M.</a></Link>  
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="/add-recipe">Add Recipe <span class="sr-only">Add Recipe</span></a>
-            </li>            
-              </div>
-            </li>
-          </ul>
+        <Link href="/index"><a class="navbar-brand mb-0 h1" href="/">Social Social Club</a></Link>  
+
+        <div class="collapse navbar-collapse" id="navbar">
+          <div class="navbar-nav">
+            {% if user.is_authenticated %}
+            <a class="nav-item nav-link" id="profile" href="/profile">Profile</a>
+            <a class="nav-item nav-link" id="logout" href="/logout">Logout</a>
+            {% else %}
+            <a class="nav-item nav-link" id="login" href="/login">Login</a>
+            <a class="nav-item nav-link" id="signUp" href="/sign-up">Sign Up</a>
+            {% endif %}
+          </div>
         </div>
     </nav>
 

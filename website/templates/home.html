@@ -1,23 +1,17 @@
 {% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
 %}
-<a class="nav-item nav-link" id="signOut" href="/sign-out">Sign Out</a>
-
-<h1 align="center">Notes</h1>
-<ul class="list-group list-group-flush" id="notes">
-  {% for note in user.notes %}
-  <li class="list-group-item">
-    {{ note.data }}
-    <button type="button" class="close" onClick="deleteNote({{ note.id }})">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </li>
-  {% endfor %}
-</ul>
-<form method="POST">
-  <textarea name="note" id="note" class="form-control"></textarea>
-  <br />
-  <div align="center">
-    <button type="submit" class="btn btn-primary">Add Note</button>
-  </div>
+<div class="text-center">
+  <br>
+  <img src="https://storage.googleapis.com/social-social-club/logo.png" class="img-fluid" alt="Responsive image"  width=20%>
+</div>
+<br>
+<h3 align="center">WELCOME!</h3>
+<hr>
+<br>
+<p align="center">Next step, complete your full profile! It should only take a minute. </p>
+<div class="d-flex justify-content-center">
+  <form action="/profile">
+  <button type="submit" class="btn btn-primary">Complete my Profile >>> </button>
 </form>
+</div>
 {% endblock %}

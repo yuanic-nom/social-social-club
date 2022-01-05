@@ -9,6 +9,17 @@ class Note(db.Model):
     date = db.Column(db.DateTime(timezone=True), default=func.now())
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
+class Profile(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    first_name = db.Column(db.String(150))
+    last_name = db.Column(db.String(150))
+    email = db.Column(db.String(150), unique=True)
+    phone_country_code = db.Column(db.Integer)
+    phone_number = db.Column(db.Integer)
+    birthdate = db.Column(db.DateTime(timezone=True))
+    like_meeting = db.Column(db.String(150))
+    like_meeting_why = db.Column(db.String(150))
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
@@ -17,3 +28,4 @@ class User(db.Model, UserMixin):
     first_name = db.Column(db.String(150))
     last_name = db.Column(db.String(150))
     recipes = db.relationship('Note')
+    profile = db.relationship('Profile')
